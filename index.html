@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HomeTech</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+    <link rel="stylesheet" href="./static/styles/style.css"/>
+    <link rel="stylesheet" href="./static/styles/responsive.css"/>
+    <link rel="stylesheet" href="./static/styles/index.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <menu>
+          <a href="./index.html"><img src="./static/img/icon_pnf.png" alt="Company Logo" class="logo_menu"> </a>
+          <h1>HomeTech</h1></a>
+          <a href="index.html" onclick="loadPage('index.html'); return false;"
+            >Inicio</a
+          >
+          <a
+            href="componentes.html"
+            onclick="loadPage('componentes.html'); return false;"
+            >Componentes</a
+            >
+          <a
+            href="conexiones.html"
+            onclick="loadPage('conexiones.html'); return false;"
+            >Conexiones</a
+          >
+          <a href="about.html" onclick="loadPage('about.html'); return false;"
+            >¿Quienes Somos?</a
+          >
+          <select id="languageSelector" onchange="changeLanguage(this.value)" class="select-idioma">
+            <option value="es" selected>Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </menu>
+      </header>
+  
+      <main>
+
+        <div class="info-section">
+          <div class="info-box">
+            <div class="info-logo-container">
+              <img src="./static/img/icon_pnf.png" alt="Company Logo" class="info-logo">
+            </div>
+            <div class="info-text">
+              <h2>HomeTech</h2>
+              <p>La mejor compañía para el hogar</p>
+            </div>
+          </div>
+          <div class="info-box">
+            <h2>Contáctanos</h2>
+            <ul>
+              <li>Huamantla, Tlax</li>
+              <li>Apizaco, Tlax</li>
+              <li>San Pablo, Tlax</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h2>Acerca de</h2>
+            <ul>
+              <li>Instalación</li>
+              <li>Características</li>
+              <li>Precios</li>
+            </ul>
+          </div>
+        </div>
+        <div class="values-section">
+          <div class="value-box">
+            <h2>Misión</h2>
+            <p>Nuestro objetivo es proporcionar el mejor servicio a nuestros clientes, asegurando su satisfacción con nuestros productos.</p>
+          </div>
+          <div class="value-box">
+            <h2>Visión</h2>
+            <p>Nuestra visión es convertirnos en un líder global en innovación, empujando constantemente los límites de lo posible.</p>
+          </div>
+          <div class="value-box">
+            <h2>Valores</h2>
+            <p>Integridad, Excelencia, Innovación, Enfoque al Cliente, Respeto, Trabajo en Equipo.</p>
+          </div>
+        </div>
+      </main>
+
+     <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="mailto:info@hometech.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="tel:+123456789"><i class="fas fa-phone"></i> Telefono</a>
+      </div>
+    </footer>
+    </div>
+    <script src="lenguaje.js"></script>
+  </body>
+</html>

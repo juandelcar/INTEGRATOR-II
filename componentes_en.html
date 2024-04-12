@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Components</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./static/styles/style.css">
+    <link rel="stylesheet" href="./static/styles/responsive.css">
+    <link rel="stylesheet" href="./static/styles/components.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <menu>
+              <a href="./index_en.html"><img src="./static/img/icon_pnf.png" alt="Company Logo" class="logo_menu"> </a>
+              <h1>HomeTech</h1></a>
+              <a href="index_en.html" onclick="loadPage('index_en.html'); return false;"
+                >Home</a
+              >
+              <a
+                href="componentes_en.html"
+                onclick="loadPage('componentes_en.html'); return false;"
+                >Components</a
+                >
+              <a
+                href="conexiones_en.html"
+                onclick="loadPage('conexiones_en.html'); return false;"
+                >Connections</a
+              >
+              <a href="about_en.html" onclick="loadPage('about_en.html'); return false;"
+                >About Us</a
+              >
+              <select id="languageSelector" onchange="changeLanguage(this.value)" class="select-idioma">
+                <option value="es">Español</option>
+                <option value="en" selected>English</option>
+                <option value="fr">Français</option>
+              </select>
+            </menu>
+          </header>
+      <main>
+        <h1 id="componentesTitulo">Project Components</h1>
+        <div class="componentes-grid">
+            <!-- Component 1 -->
+            <a href="https://articulo.mercadolibre.com.mx/MLM-1330523256-4-piezas-camara-vga-ov7670-640x480-arduino-pic-raspberry-_JM?quantity=1" class="componente-item">
+                <img src="./static/img/Camara_Vga.png" alt="Vga Camera Ov7670">
+                <h3>Vga Camera Ov7670 640x480</h3>
+                <p>This module has a VGA CMOS image sensor OV7670, capable of working at a maximum of 30 fps (frames per second) at a resolution of 640 x 480 pixels (0.3 MPx)...</p>
+            </a>
+            <!-- Component 2 -->
+            <a href="https://articulo.mercadolibre.com.mx/MLM-1468036969-esp32cam-esp32-con-camara-arduino-wifi-y-convertidor-usb-ttl-_JM?quantity=1" class="componente-item">
+                <img src="./static/img/Es32_Camara.png" alt="Esp32cam Esp32">
+                <h3>Esp32cam Esp32 With Camera</h3>
+                <p>Programmable by Arduino IDE, with example of facial tracking and facial recognition.
+                    ESP32 WiFi + Bluetooth / BLE4.2...</p>
+            </a>
+            <!-- Component 3 -->
+            <a href="https://articulo.mercadolibre.com.mx/MLM-1520049306-nodemcu-esp32-wifi-ch340g-usb-c-shield-placa-expansion-30p-_JM?quantity=1" class="componente-item">
+            <img src="./static/img/Esp32_Wifi.png" alt="Esp32 Wifi">
+            <h3>Nodemcu Esp32 Wifi Ch340g Usb-c + Shield Expansion Board 30p</h3>
+            <p>Integrates the ESP-WROOM-32 SoM based on the ESP32 SoC, the Ch340G USB-serial converter necessary for programming the ESP32 via USB, voltage regulators and indicator LEDs...</p>
+            </a>
+            <!-- Component 4 -->
+            <a href="https://articulo.mercadolibre.com.mx/MLM-755243517-mq-2-modulo-sensor-de-gas-lp-propano-butano-humo-y-otros-mq2-_JM?quantity=1" class="componente-item">
+                <img src="./static/img/Mq-2.png" alt="Mq-2 Sensor">
+                <h3>Mq-2 Gas Sensor Module Lp Propane Butane Smoke</h3>
+                <p>The MQ2 gas sensor is analog and is used in the detection of gas leaks from consumer and industrial equipment. This sensor is suitable for gas detection such as:</p>
+            </a>
+            <!-- Component 5 -->
+            <a href="https://articulo.mercadolibre.com.mx/MLM-797535002-sensor-pir-hc-sr501-detector-de-movimiento-compatible-arduin-_JM?quantity=1" class="componente-item">
+                <img src="./static/img/Sensor_Pir.png" alt="Pir Sensor">
+                <h3>Pir Hc-sr501 Motion Detector Sensor Compatible Arduino</h3>
+                <p>Pyroelectric (Passive) infrared sensor (also called PIR)
+                    The module includes the sensor, lens, PIR controller BISS0001, regulator and all support components for easy use...</p>
+            </a>
+      </main>
+      <footer class="footer">
+        <div class="footer-links">
+            <a href="https://github.com" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+            <a href="mailto:info@hometech.com"><i class="fas fa-envelope"></i> Email</a>
+            <a href="tel:+123456789"><i class="fas fa-phone"></i> Phone</a>
+        </div>
+    </footer>
+    </div>
+    <script src="lenguaje.js"></script>
+</body>
+</html>

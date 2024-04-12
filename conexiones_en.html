@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <link rel="stylesheet" href="./static/styles/style.css"/>
+  <link rel="stylesheet" href="./static/styles/responsive.css"/>
+  <link rel="stylesheet" href="./static/styles/conexiones.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+        <menu>
+          <a href="./index_en.html"><img src="./static/img/icon_pnf.png" alt="Company Logo" class="logo_menu"> </a>
+          <h1>HomeTech</h1></a>
+          <a href="index_en.html" onclick="loadPage('index_en.html'); return false;"
+            >Home</a
+          >
+          <a
+            href="componentes_en.html"
+            onclick="loadPage('componentes_en.html'); return false;"
+            >Components</a
+            >
+          <a
+            href="conexiones_en.html"
+            onclick="loadPage('conexiones_en.html'); return false;"
+            >Connections</a
+          >
+          <a href="about_en.html" onclick="loadPage('about_en.html'); return false;"
+            >About Us</a
+          >
+          <select id="languageSelector" onchange="changeLanguage(this.value)" class="select-idioma">
+            <option value="es">Español</option>
+            <option value="en" selected>English</option>
+            <option value="fr">Français</option>
+          </select>
+        </menu>
+      </header>
+    <main>
+      <h1>Connections</h1>
+      <div class="slideshow-container">
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <div class="mySlides fade">
+          <img src="./static/img/iot1.jpg" alt="IoT1">
+          <div class="text">Information about IoT1</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="./static/img/iot2.jpg" alt="IoT2">
+          <div class="text">Information about IoT2</div>
+        </div>
+        <div class="mySlides fade">
+          <img src="./static/img/iot3.jpg" alt="IoT3">
+          <div class="text">Information about IoT3</div>
+        </div>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      </div>
+      <p>Here you can find some IoT connections made during the project</p>
+    </main>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="mailto:info@hometech.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="tel:+123456789"><i class="fas fa-phone"></i> Phone</a>
+      </div>
+    </footer>
+  </div>
+  <script src="./lenguaje.js"></script>
+  <script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+  
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+  
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slides[slideIndex - 1].style.display = "block";
+    }
+  </script>
+</body>
+</html>

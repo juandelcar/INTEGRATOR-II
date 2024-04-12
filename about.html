@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>¿Quienes Somos?</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./static/styles/style.css" />
+    <link rel="stylesheet" href="./static/styles/responsive.css" />
+    <link rel="stylesheet" href="./static/styles/about.css">
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <menu>
+          <a href="./index.html"><img src="./static/img/icon_pnf.png" alt="Company Logo" class="logo_menu"> </a>
+          <h1>HomeTech</h1></a>
+          <a href="index.html" onclick="loadPage('index.html'); return false;"
+            >Inicio</a
+          >
+          <a
+            href="componentes.html"
+            onclick="loadPage('componentes.html'); return false;"
+            >Componentes</a
+            >
+          <a
+            href="conexiones.html"
+            onclick="loadPage('conexiones.html'); return false;"
+            >Conexiones</a
+          >
+          <a href="about.html" onclick="loadPage('about.html'); return false;"
+            >¿Quienes Somos?</a
+          >
+          <select id="languageSelector" onchange="changeLanguage(this.value)">
+            <option value="es">Español</option>
+            <option value="en">English</option>
+            <option value="fr">Français</option>
+          </select>
+        </menu>
+      </header>
+      <main>
+        <h1>¿Quiénes Somos?</h1>
+        <div class="team-section">
+          
+          
+          <div class="team-card">
+            <div class="team-card-inner">
+              
+              <div class="team-card-front">
+                <img src="./static/img/ft2.jpg" alt="Luis Daniel" class="team-photo">
+                <h2>Luis Daniel Degante</h2>
+                <p>Gerente de Proyecto</p>
+                <p>Email: luis@example.com</p>
+                <p>Teléfono: +1 (123) 456-7890</p>
+              </div>
+              
+              <div class="team-card-back">
+                <p>Información adicional sobre Luis Daniel.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="team-card">
+            <div class="team-card-inner">
+              
+              <div class="team-card-front">
+                <img src="./static/img/ft1.jpg" alt="Juan Del Carmen" class="team-photo">
+                <h2>Juan Del Carmen</h2>
+                <p>Desarrollador Web</p>
+                <p>Email: juan@example.com</p>
+                <p>Teléfono: +1 (123) 456-7890</p>
+              </div>
+              <!-- Dorso de la tarjeta -->
+              <div class="team-card-back">
+                <p>Información adicional sobre Juan Del Cramen.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-card-inner">
+              <!-- Frente de la tarjeta -->
+              <div class="team-card-front">
+                <img src="./static/img/ft3.jpg" alt="Ulises Moredia" class="team-photo">
+                <h2>Ulises Moredia</h2>
+                <p>Desarrollador Movil</p>
+                <p>Email: ulises@example.com</p>
+                <p>Teléfono: +1 (123) 456-7890</p>
+              </div>
+              <!-- Dorso de la tarjeta -->
+              <div class="team-card-back">
+                <p>Información adicional sobre Ulises Moredia.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="team-card">
+            <div class="team-card-inner">
+              <!-- Frente de la tarjeta -->
+              <div class="team-card-front">
+                <img src="./static/img/ft4.jpg" alt="Juan Pablo Torres" class="team-photo">
+                <h2>Juan Pablo Torres</h2>
+                <p>Analista</p>
+                <p>Email: pablo@example.com</p>
+                <p>Teléfono: +1 (123) 456-7890</p>
+              </div>
+              <!-- Dorso de la tarjeta -->
+              <div class="team-card-back">
+                <p>Información adicional sobre Juan Pablo Torres.</p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </main>
+
+     <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="mailto:info@hometech.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="tel:+123456789"><i class="fas fa-phone"></i> Telefono</a>
+      </div>
+    </footer>
+    </div>
+
+    
+
+    <script src="lenguaje.js"></script>
+  </body>
+</html>

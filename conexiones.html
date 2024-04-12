@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+  <link rel="stylesheet" href="./static/styles/style.css"/>
+  <link rel="stylesheet" href="./static/styles/responsive.css"/>
+  <link rel="stylesheet" href="./static/styles/conexiones.css">
+  <title>Conexiones IoT</title>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <menu>
+        <a href="./index.html"><img src="./static/img/icon_pnf.png" alt="Company Logo" class="logo_menu"> </a>
+        <h1>HomeTech</h1></a>
+        <a href="index.html" onclick="loadPage('index.html'); return false;"
+          >Inicio</a
+        >
+        <a
+          href="componentes.html"
+          onclick="loadPage('componentes.html'); return false;"
+          >Componentes</a
+          >
+        <a
+          href="conexiones.html"
+          onclick="loadPage('conexiones.html'); return false;"
+          >Conexiones</a
+        >
+        <a href="about.html" onclick="loadPage('about.html'); return false;"
+          >¿Quienes Somos?</a
+        >
+        <select id="languageSelector" onchange="changeLanguage(this.value)" class="select-idioma">
+          <option value="es" selected>Español</option>
+          <option value="en">English</option>
+          <option value="fr">Français</option>
+        </select>
+      </menu>
+    </header>
+    <main>
+      <h1>Conexiones</h1>
+      <!-- Contenedor para el slider -->
+      <div class="slider-container">
+        <div class="slider">
+          <!-- Todas las imágenes dentro del slider -->
+          <!-- Las primeras tres imágenes -->
+          <div class="grid-item">
+            <img src="./static/img/iot1.jpg" alt="IoT1">
+            <div class="info">Información sobre IoT1</div>
+          </div>
+          <div class="grid-item">
+            <img src="./static/img/iot2.jpg" alt="IoT2">
+            <div class="info">Información sobre IoT2</div>
+          </div>
+          <div class="grid-item">
+            <img src="./static/img/iot3.jpg" alt="IoT3">
+            <div class="info">Información sobre IoT3</div>
+          </div>
+          <!-- Imágenes adicionales en el slider -->
+          <div class="grid-item">
+            <img src="./static/img/iot1.1.jpg" alt="IoT1.1">
+            <div class="info">Información sobre IoT1.1</div>
+          </div>
+          <div class="grid-item">
+            <img src="./static/img/iot2.2.jpg" alt="IoT2.1">
+            <div class="info">Información sobre IoT2.1</div>
+          </div>
+          <div class="grid-item">
+            <img src="./static/img/iot3.3.jpg" alt="IoT3.1">
+            <div class="info">Información sobre IoT3.1</div>
+          </div>
+          <!-- Agrega aquí más imágenes según sea necesario -->
+        </div>
+      </div>
+      <p>Aquí podrás encontrar algunas conexiones de IoT realizadas durante el proyecto</p>
+    </main>
+    <footer class="footer">
+      <div class="footer-links">
+        <a href="https://github.com" target="_blank"
+          ><i class="fab fa-github"></i> GitHub</a
+        >
+        <a href="mailto:info@hometech.com"
+          ><i class="fas fa-envelope"></i> Email</a
+        >
+        <a href="tel:+123456789"><i class="fas fa-phone"></i> Telefono</a>
+      </div>
+    </footer>
+  </div>
+  <script src="./lenguaje.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const gridItems = document.querySelectorAll('.slider .grid-item');
+
+      gridItems.forEach(item => {
+        item.addEventListener('click', () => {
+          // Cierra cualquier otro elemento expandido
+          const expandedItem = document.querySelector('.grid-item.expanded');
+          if (expandedItem && expandedItem !== item) {
+            expandedItem.classList.remove('expanded');
+            expandedItem.querySelector('.info').style.display = 'none';
+          }
+
+          // Alterna la clase 'expanded' en el elemento de la cuadrícula
+          item.classList.toggle('expanded');
+
+          // Muestra u oculta la información
+          const info = item.querySelector('.info');
+          if (item.classList.contains('expanded')) {
+            info.style.display = 'block';
+          } else {
+            info.style.display = 'none';
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+@media (max-width: 600px) {
+    menu {
+        flex-direction: column; 
+        padding: 0 10px; 
+    }
+    menu a {
+        margin: 10px 0; 
+    }
+    .footer-links {
+        flex-direction: column;
+    }
+}
+
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    menu {
+        width: 90%;
+    }
+    .footer-links {
+        gap: 10px;
+    }
+}
+
+@media (min-width: 1025px) {
+    menu {
+        width: 80%; 
+    }
+    .footer-links {
+        gap: 20px; 
+    }
+}

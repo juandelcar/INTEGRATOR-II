@@ -1,0 +1,122 @@
+h1{
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 1px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 20px; /* Añade bordes redondeados */
+}
+
+.grid-item img {
+  width: 75%;
+  height: 50%;
+  transition: transform 0.3s ease;
+  border-radius: 20px; /* Añade bordes redondeados */
+}
+
+.grid-item:hover img {
+  transform: scale(1.1); /* Efecto de sobresalir al pasar el cursor */
+}
+
+.grid-item .info {
+  display: none;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  width: 100%;
+  bottom: 0;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: 0.3s ease;
+  border-radius: 0 0 20px 20px; /* Añade bordes redondeados en la parte inferior */
+}
+
+.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Centra y escala la imagen */
+  width: auto; /* 60% del ancho de la pantalla */
+  height: 60vh; /* 60% del alto de la pantalla */
+  z-index: 10;
+}
+
+.expanded img {
+  width: 30vw;
+  height: 60vh;
+}
+
+.expanded .info {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  padding: 10px;
+  width: 100%;
+}
+
+
+slider-container {
+  overflow-y: auto; /* Permite el desplazamiento vertical */
+  max-height: 60vh; /* Altura máxima del slider */
+  margin: 0 auto; /* Centra el slider horizontalmente */
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 10px; /* Espacio entre las imágenes */
+  padding: 10px;
+}
+
+/* Estilos para manejar la expansión de las imágenes */
+.grid-item.expanded {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1); /* Centra y escala la imagen */
+  z-index: 10; /* Asegura que la imagen expandida esté sobre otros elementos */
+  cursor: default; /* Cambia el cursor a su estado por defecto */
+}
+
+.grid-item.expanded img {
+  width: auto; /* Se ajusta al ancho del contenedor .expanded */
+  height: auto; /* Se ajusta al alto del contenedor .expanded */
+  max-width: 80vw; /* Máximo ancho de la imagen expandida */
+  max-height: 80vh; /* Máximo alto de la imagen expandida */
+}
+
+.grid-item.expanded .info {
+  display: block; /* Asegura que la información esté visible */
+  position: absolute;
+  width: 100%; /* Ancho completo del contenedor .expanded */
+  bottom: 0; /* Alinea la información en la parte inferior de la imagen */
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente para la información */
+  color: white; /* Color del texto */
+  padding: 20px; /* Espaciado interno */
+  box-sizing: border-box; /* Asegura que el padding no afecte las dimensiones definidas */
+  border-radius: 0 0 20px 20px; /* Bordes redondeados en la parte inferior */
+}
+
+/* Estilos para el slider cuando una imagen está expandida */
+.slider-container.expanded {
+  max-height: none; /* Elimina la altura máxima para permitir la expansión completa */
+}
+
+/* Restablece el estilo de las imágenes no expandidas */
+.grid-item:not(.expanded) img {
+  transition: transform 0.3s ease; /* Transición suave para el efecto de escala */
+}
+
+.grid-item:not(.expanded):hover img {
+  transform: scale(1.1); /* Efecto de sobresalir al pasar el cursor */
+}
