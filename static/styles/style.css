@@ -23,6 +23,10 @@ header {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
 }
 
+.menu-toggle {
+    display: none;
+}
+
 menu {
     display: flex; 
     justify-content: space-between; 
@@ -46,6 +50,7 @@ menu a {
 menu a:hover {
     color: #000; 
     background-color: #eaeaea; 
+    border-radius: 10px;
 }
 
 .logo_menu {
@@ -144,3 +149,4 @@ menu a:hover {
     display: none;
   }
 }
+

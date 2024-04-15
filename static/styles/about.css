@@ -68,3 +68,18 @@ h1{
         transform: rotateY(180deg);
       }
     
+
+      .team-card-back ul {
+        list-style-type: circle; 
+        padding-left: 20px; 
+      }
+      
+      .team-card-back li {
+        margin-bottom: 5px;
+      }
+
+      .team-card-back a{
+        text-decoration: none;
+        color: black;
+        font-weight: bold;
+      }

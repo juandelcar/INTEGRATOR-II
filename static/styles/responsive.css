@@ -1,4 +1,26 @@
 @media (max-width: 600px) {
+
+    @media (max-width: 600px) {
+        .menu-toggle {
+            display: block;
+            width: 30%; 
+            text-align: center; 
+            margin-top: 10px; 
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        
+        menu a, menu select {
+            display: none;
+        }
+        
+        menu.open a, menu.open select {
+            display: block;
+            text-align: center; 
+            width: 100%;
+        }
+    }
+
     menu {
         flex-direction: column; 
         padding: 0 10px; 

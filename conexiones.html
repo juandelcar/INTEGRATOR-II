@@ -15,6 +15,7 @@
       <menu>
         <a href="./index.html"><img src="./static/img/icon_pnf.png" alt="Company Logo" class="logo_menu"> </a>
         <h1>HomeTech</h1></a>
+        <button class="menu-toggle">☰</button>
         <a href="index.html" onclick="loadPage('index.html'); return false;"
           >Inicio</a
         >
@@ -40,6 +41,7 @@
     </header>
     <main>
       <h1>Conexiones</h1>
+      <p>Aquí podrás encontrar algunas conexiones de IoT realizadas durante el proyecto</p>
       <!-- Contenedor para el slider -->
       <div class="slider-container">
         <div class="slider">
@@ -73,7 +75,6 @@
           <!-- Agrega aquí más imágenes según sea necesario -->
         </div>
       </div>
-      <p>Aquí podrás encontrar algunas conexiones de IoT realizadas durante el proyecto</p>
     </main>
     <footer class="footer">
       <div class="footer-links">
@@ -88,6 +89,7 @@
     </footer>
   </div>
   <script src="./lenguaje.js"></script>
+  <script src="./menu.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const gridItems = document.querySelectorAll('.slider .grid-item');
