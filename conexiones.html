@@ -41,12 +41,13 @@
     </header>
     <main>
       <h1>Conexiones</h1>
-      <p>Aquí podrás encontrar algunas conexiones de IoT realizadas durante el proyecto</p>
-      <!-- Contenedor para el slider -->
+      <h4>
+        ¡Bienvenido a nuestro apartado de Conexiones IoT!
+        Aquí encontrarás una cuidadosa selección de imágenes que muestran diversas implementaciones 
+        y aplicaciones de Internet de las Cosas en acción.
+      </h4>
       <div class="slider-container">
         <div class="slider">
-          <!-- Todas las imágenes dentro del slider -->
-          <!-- Las primeras tres imágenes -->
           <div class="grid-item">
             <img src="./static/img/iot1.jpg" alt="IoT1">
             <div class="info">Información sobre IoT1</div>
@@ -59,7 +60,6 @@
             <img src="./static/img/iot3.jpg" alt="IoT3">
             <div class="info">Información sobre IoT3</div>
           </div>
-          <!-- Imágenes adicionales en el slider -->
           <div class="grid-item">
             <img src="./static/img/iot1.1.jpg" alt="IoT1.1">
             <div class="info">Información sobre IoT1.1</div>
@@ -72,7 +72,10 @@
             <img src="./static/img/iot3.3.jpg" alt="IoT3.1">
             <div class="info">Información sobre IoT3.1</div>
           </div>
-          <!-- Agrega aquí más imágenes según sea necesario -->
+          <div class="grid-item">
+            <img src="./static/img/iot4.4.jpg" alt="IoT3.1">
+            <div class="info">Información sobre IoT4.4</div>
+          </div>
         </div>
       </div>
     </main>
@@ -96,17 +99,12 @@
 
       gridItems.forEach(item => {
         item.addEventListener('click', () => {
-          // Cierra cualquier otro elemento expandido
           const expandedItem = document.querySelector('.grid-item.expanded');
           if (expandedItem && expandedItem !== item) {
             expandedItem.classList.remove('expanded');
             expandedItem.querySelector('.info').style.display = 'none';
           }
-
-          // Alterna la clase 'expanded' en el elemento de la cuadrícula
-          item.classList.toggle('expanded');
-
-          // Muestra u oculta la información
+          item.classList.toggle('expanded');         
           const info = item.querySelector('.info');
           if (item.classList.contains('expanded')) {
             info.style.display = 'block';

@@ -7,21 +7,28 @@ h1{
   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
   gap: 1px;
   padding: 10px;
-  margin: 0 auto;
+  margin: 0 auto; /* Asegura que el contenedor del grid esté centrado */
+  width: 90%; /* Ajusta el ancho según sea necesario */
 }
 
 .grid-item {
+  display: flex;
+  justify-content: center; /* Centra horizontalmente el contenido de .grid-item */
+  align-items: center; /* Centra verticalmente el contenido de .grid-item */
   position: relative;
   cursor: pointer;
   overflow: hidden;
-  border-radius: 20px; /* Añade bordes redondeados */
+  border-radius: 20px;
+  height: 100%; /* Asegúrate de que .grid-item tenga una altura definida si es necesario */
 }
 
 .grid-item img {
-  width: 75%;
-  height: 50%;
+  display: block;
+  width: 75%; /* Ajusta el ancho de la imagen */
+  height: auto;
+  margin: auto; /* Centra la imagen horizontalmente dentro de .grid-item */
   transition: transform 0.3s ease;
-  border-radius: 20px; /* Añade bordes redondeados */
+  border-radius: 20px;
 }
 
 .grid-item:hover img {
